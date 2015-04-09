@@ -2,7 +2,7 @@
 /.bundle
 
 # Ignore the build directory
-/build
+/.build
 
 # The content of this directory is maintained by bower, so don´t track it.
 /source/bower_components
