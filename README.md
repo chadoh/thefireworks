@@ -7,7 +7,7 @@ Site built with [Middleman] and the [foundation5-basic] template.
 
 # Run it locally
 
-Clone the source code, install Ruby, and then:
+Clone the source code, install Ruby. You might already have it&mdash;check with `ruby -v`. On new versions of OSX, it should say that you have version 2.0.0. That'll do. Once you verify you have it:
 
     bundle install
     middleman
@@ -25,6 +25,8 @@ Assuming you have that out of the way, all you need to do is
     middleman deploy
 
 ## To AWS (the real deal)
+
+The `middleman deploy` command automatically runs `middleman build` before pushing to the `gh-pages` branch on Github. But if you don't run it, you'll need to make sure you run `middleman build` yourself before kicking off a deploy to AWS. The rest of this will just push the built files from the `.build` directory up to an S3 bucket fronted by a Cloudfront distribution.
 
 You'll need these gems:
 

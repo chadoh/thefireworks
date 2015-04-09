@@ -65,7 +65,7 @@ namespace :aws do
   end
 
   desc "Deploy files to S3"# and invalidate Cloudfront distribution"
-  task :deploy => [:s3]
+  task :deploy => [:s3, :invalidate]
 
   task :default => :deploy
 end
